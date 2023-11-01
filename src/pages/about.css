@@ -1,0 +1,25 @@
+.box {
+  --mask: radial-gradient(30px at 50% calc(100% - 30px), #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(30px at 50% calc(100% + 0px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  height: 110px;
+  background: linear-gradient(281deg, #484f9c 0%, #a964e0 100%);
+}
+.about-img {
+  transition: all 1s ease-in-out;
+  animation: blob-animate 5s ease-in-out alternate infinite;
+}
+@keyframes blob-animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 38% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 68%;
+  }
+  100% {
+    border-radius: 68% 40% 30% 70%/60% 60% 30% 60%;
+  }
+}

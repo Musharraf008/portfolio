@@ -1,0 +1,123 @@
+@font-face {
+  font-family: nameFont;
+  src: url(../assets/fonts/Adequate-ExtraLight.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.home-wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5rem;
+  color: #c48aff;
+  height: 100%;
+}
+.home-main-section {
+  line-height: normal;
+}
+.home-main-section-first-child {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-main-section span {
+  color: #ffffff92;
+  font-size: 1.1rem;
+}
+.name {
+  font-weight: 900;
+  font-size: 3rem;
+  background: linear-gradient(91deg, #fff500 -9.64%, #ff5c00 185.3%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: nameFont, "Roboto Slab", serif;
+  line-height: 60px;
+}
+
+.post {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #c48aff71;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(12deg, #8b55ff8b 0%, #c48aff62 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-btns {
+  display: flex;
+  gap: 1rem;
+}
+.primary-btn {
+  width: 30%;
+  color: #c48aff;
+  padding: 0.8rem 1rem;
+  border-radius: 2.5rem;
+  background: transparent;
+  border: 2px solid #c48aff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+.primary-btn:hover {
+  /* background: linear-gradient(90deg, #A0C4FC 0%, #D2C3FC 100%); */
+  background: linear-gradient(120deg, #a0c4fc 0%, #c48aff 100%);
+  transform: translateY(-5px);
+  color: #2f0743;
+  border: 2px solid transparent;
+}
+.secondary-btn {
+  border: 2px solid transparent;
+  padding: 0.9rem 1.4rem;
+  border-radius: 2.5rem;
+  color: #2f0743;
+  border: transparent;
+  background: linear-gradient(90deg, #a0c4fc 0%, #d2c3fc 100%);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+.secondary-btn:hover {
+  background: transparent;
+  border: 2px solid #c48aff;
+  transform: translateY(-5px);
+  color: #c48aff;
+}
+.arrow-btn {
+  border: none;
+  width: 40%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #c48aff71;
+  animation: arrow-btn-animation 2s ease-in-out infinite;
+  transition: all 300ms ease-in-out;
+}
+.arrow-btn:hover{
+  color: #c48affd0;
+}
+.my-photo {
+  width: 15rem;
+  filter: drop-shadow(0px 0px 6px #000000b4);
+}
+@keyframes arrow-btn-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
