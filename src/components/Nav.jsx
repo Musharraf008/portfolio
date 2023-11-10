@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import logo from "../assets/icons/logo.svg";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillHome } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import linkedin from "../assets/icons/Linkedin.svg";
 import instagram from "../assets/icons/instagram.svg";
 import twitter from "../assets/icons/twitter.svg";
 import { motion } from "framer-motion";
+import { GrContactInfo } from "react-icons/gr";
+import { HiInformationCircle } from "react-icons/hi";
+import { BsTools } from "react-icons/bs";
+import { RiLightbulbFlashFill } from "react-icons/ri";
 
 const Nav = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -41,7 +45,7 @@ const Nav = () => {
     visible: {
       y: 0,
       transition: {
-        type: "spring"
+        type: "spring",
       },
     },
     hidden: { y: -100 },
@@ -51,17 +55,29 @@ const Nav = () => {
       x: 0,
       transition: {
         type: "spring",
-        stiffness: 200
+        stiffness: 200,
       },
     },
     hidden: { x: -150 },
   };
   return (
-    <nav className="navbar" >
+    <nav className="navbar">
       <div className="main-nav">
-        <motion.img src={logo} className="nav-logo" initial="hidden" animate="visible" variants={logoVariant} />
+        <motion.img
+          src={logo}
+          className="nav-logo"
+          initial="hidden"
+          animate="visible"
+          variants={logoVariant}
+        />
         <div className="hamburger">
-          <motion.div className="menu-wrapper" drag initial="hidden" animate="visible" variants={variant}>
+          <motion.div
+            className="menu-wrapper"
+            drag
+            initial="hidden"
+            animate="visible"
+            variants={variant}
+          >
             <motion.div
               className="nav-bg"
               variants={variants}
@@ -75,10 +91,23 @@ const Nav = () => {
                 {openMenu ? <AiOutlineClose size={35} /> : <FiMenu size={35} />}
               </button>
               <div className="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">
+                  <AiFillHome /> <span>Home</span>
+                </a>
+                <a href="#about">
+                  <HiInformationCircle /> <span>About</span>
+                </a>
+                <a href="#about">
+                  <BsTools /> <span>Tools</span>
+                </a>
+                <a href="#projects">
+                  {" "}
+                  <RiLightbulbFlashFill /> <span>Projects</span>
+                </a>
+                <a href="#contact">
+                  {" "}
+                  <GrContactInfo /> <span>Contact</span>
+                </a>
               </div>
               <div className="socials">
                 <a
@@ -89,7 +118,7 @@ const Nav = () => {
                   <motion.img
                     src={linkedin}
                     alt="linkedin"
-                    whileHover={'hover'}
+                    whileHover={"hover"}
                     variants={socialsIconsVariants}
                   />
                 </a>
@@ -101,7 +130,7 @@ const Nav = () => {
                   <motion.img
                     src={instagram}
                     alt="instagram"
-                    whileHover={'hover'}
+                    whileHover={"hover"}
                     variants={socialsIconsVariants}
                   />
                 </a>
@@ -113,7 +142,7 @@ const Nav = () => {
                   <motion.img
                     src={twitter}
                     alt="twitter"
-                    whileHover={'hover'}
+                    whileHover={"hover"}
                     variants={socialsIconsVariants}
                   />
                 </a>

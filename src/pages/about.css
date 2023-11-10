@@ -23,3 +23,50 @@
     border-radius: 68% 40% 30% 70%/60% 60% 30% 60%;
   }
 }
+.about-section-container{
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+h2{
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.who-am-i-wrapper h2 {
+  color: #28fdfd;
+}
+.about-sec-top {
+  display: flex;
+}
+.who-am-i-wrapper{
+  width: 50%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sections-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.sections-wrapper img{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.what-i-do-wrapper{
+  width: 65%;
+  margin-top: 2rem;
+}
+.what-i-do-wrapper p{
+  margin-bottom: 1rem;
+}
+.what-i-do-wrapper h2{
+  color: #FF3D55;
+}
+.bullet-point-wrapper{
+  
+  display: flex;
+  gap: 1rem;
+}
