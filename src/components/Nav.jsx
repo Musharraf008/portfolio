@@ -73,7 +73,6 @@ const Nav = () => {
         <div className="hamburger">
           <motion.div
             className="menu-wrapper"
-            drag
             initial="hidden"
             animate="visible"
             variants={variant}
