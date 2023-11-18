@@ -1,15 +1,15 @@
 import React from "react";
 import "./about.css";
-import img from "../assets/img/myImg.png";
-import whoAmI from "../assets/icons/who am i.png";
-import WhatIDo from "../assets/icons/whatIDo.png";
+import img from "../../assets/img/myImg.png";
+import whoAmI from "../../assets/icons/who am i.png";
+import WhatIDo from "../../assets/icons/whatIDo.png";
 import { BsCheck2Circle } from "react-icons/bs";
-import whatICanDo from "../assets/icons/what i can do.png";
-import mobileDesignGIF from "../assets/gif/output-onlinegiftools.gif";
-import monitorGIF from "../assets/gif/monitor-unscreen.gif";
-import responsiveDesignGIF from "../assets/gif/responsive-design-unscreen.gif";
-import settingGIF from "../assets/gif/output-onlinegiftools (1).gif";
-import ATQFrame from "../assets/frames/Frame 72.png";
+import whatICanDo from "../../assets/icons/what i can do.png";
+import mobileDesignGIF from "../../assets/gif/output-onlinegiftools.gif";
+import monitorGIF from "../../assets/gif/monitor-unscreen.gif";
+import responsiveDesignGIF from "../../assets/gif/responsive-design-unscreen.gif";
+import settingGIF from "../../assets/gif/output-onlinegiftools (1).gif";
+import ATQFrame from "../../assets/frames/Frame 72.png";
 import { BiMessageDetail } from "react-icons/bi";
 
 const About = () => {
@@ -110,7 +110,7 @@ const About = () => {
             </div>
             <div className="ATQ-questions-wrapper">
               <i>“HOW MUCH DOES [X] COST?”</i>
-              <p>Determining the cost of my services is a process that involves understanding the specifics of your project. I would be happy to discuss your needs and provide you with an estimate that reflects the value of my time and expertise. While I cannot offer rock-bottom prices, I believe that my prices are fair and reasonable given the quality of work that I deliver. Typically, a portfolio of my caliber falls within the price range of $800 to $1200, but I am always open to discussing your specific needs and finding a solution that works for you. Let's work together to create something great!</p>
+              <p>Determining the cost of my services is a process that involves understanding the specifics of your project. I would be happy to discuss your needs and provide you with an estimate that reflects the value of my time and expertise. I believe that my prices are fair and reasonable given the quality of work that I deliver. Typically, a portfolio like mine falls within the price range of $800 to $1200, but I am always open to discussing your specific needs and finding a solution that works for you. Let's work together to create something great!</p>
             </div>
             <div className="ATQ-questions-wrapper">
               <i>“DO YOU CHARGE BY THE HOUR?”</i>

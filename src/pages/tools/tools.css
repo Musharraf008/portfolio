@@ -1,0 +1,61 @@
+.tools-container {
+  /* background-color: lightblue; */
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.tools-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.tools-section-heading h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: whitesmoke;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+}
+.tools-section-heading img {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+.tool-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+  /* grid-gap: 1rem; */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+.tool-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  padding: 15px 20px;
+  transition: all 500ms ease-out;
+  cursor: pointer;
+}
+.tool-box:hover{
+    background: rgba(255, 255, 255, 0.5);
+    
+}
+.tool-description{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+.tool-box h3{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.tool-box p{
+    font-size: .8rem;
+    width: 80%;
+}
+.tool-box img{
+    width: 5rem;
+}

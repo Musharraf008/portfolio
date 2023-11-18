@@ -1,0 +1,74 @@
+.projects-container {
+  margin: auto;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 90%;
+}
+.projects-container header {
+  color: whitesmoke;
+  font-family: Caveat;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.orange {
+  color: #F0A024;
+}
+.green {
+  color: #04e07d;
+}
+.projects-container header img {
+  width: 4rem;
+  height: 4rem;
+}
+.projects-container main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.project-wrapper-bg {
+  width: 100%;
+  height: 50vh;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+ .project-wrapper-bg:hover .project-img {
+  transform: scale(1.2);
+  /* width: 40%; */
+}
+.project-blur-bg {
+  width: 100%;
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 3.5rem;
+  font-family: "space Grotsek";
+}
+.bg-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.project-img {
+  width: 35%;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  transition: all 400ms ease-out;
+}
+.project-description-wrapper h3 {
+  font-size: 3rem;
+  font-weight: 300;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Nav from "../components/Nav";
-import img from "../assets/img/my-photo.png";
+import Nav from '../../components/Nav'
+import img from "../../assets/img/my-photo.png";
 import { motion } from "framer-motion";
 import { BsArrowDown } from "react-icons/bs";
 
