@@ -1,23 +1,29 @@
-@font-face {
-  font-family: nameFont;
-  src: url(../../assets/fonts/Adequate-ExtraLight.ttf);
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 .home-wrapper {
-  width: 70%;
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
-  margin-left: 5rem;
+  margin: auto;
+  /* margin-left: 5rem; */
   color: #c48aff;
   height: 100%;
+  position: relative;
+}
+.home-victor-bg {
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  z-index: 0;
 }
 .home-main-section {
-  line-height: normal;
+  width: 65%;
 }
 .home-main-section-first-child {
   height: 60vh;
@@ -25,38 +31,41 @@
   flex-direction: column;
   justify-content: center;
 }
-.home-main-section span {
+.home-main-section-first-child-span{
   color: #ffffff92;
   font-size: 1.1rem;
+  font-family: Space Grotesk;
 }
 .name {
-  font-weight: 900;
-  font-size: 3rem;
-  background: linear-gradient(91deg, #fff500 -9.64%, #ff5c00 185.3%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: nameFont, "Roboto Slab", serif;
-  line-height: 60px;
+  font-weight: 200;
+  font-size: 5rem;
+  color: #fff500;
+  /* font-family: nameFont, "Roboto Slab", serif; */
+  font-family: poppins;
+  line-height: 100%;
+  z-index: 111;
 }
 
 .post {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #c48aff71;
   line-height: normal;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(12deg, #8b55ff8b 0%, #c48aff62 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.4rem;
+  font-family: Anonymous Pro;
 }
-.home-btns {
-  display: flex;
-  gap: 1rem;
+.sub-post {
+  margin-bottom: 0.8rem;
+}
+.sub-post i {
+  font-size: .9rem;
+  background-color: #c48aff;
+  color: #2f0743;
+  font-family: "Space Grotsek";
+  padding-bottom: 3px;
 }
 .primary-btn {
-  width: 30%;
+  width: 20%;
   color: #c48aff;
   padding: 0.8rem 1rem;
   border-radius: 2.5rem;
@@ -67,11 +76,29 @@
   transition: all 400ms ease-in-out;
 }
 .primary-btn:hover {
-  /* background: linear-gradient(90deg, #A0C4FC 0%, #D2C3FC 100%); */
   background: linear-gradient(120deg, #a0c4fc 0%, #c48aff 100%);
   transform: translateY(-5px);
   color: #2f0743;
   border: 2px solid transparent;
+}
+.changed-primary-btn {
+  width: 20%;
+  color: #006effb7;
+  padding: 0.8rem 0rem;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid #006eff9d;
+
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+.changed-primary-btn:hover {
+  background: linear-gradient(91deg, #0094ff -9.64%, #003dab 185.3%);
+  color: #ffffff;
+  border: 2px solid transparent;
+  box-shadow: 6px 8px 0px 1px rgba(0, 0, 0, 0.75),
+    -2px -2px 2px 1px rgba(255, 255, 255, 0.3) inset;
 }
 .secondary-btn {
   border: 2px solid transparent;
@@ -101,7 +128,7 @@
   animation: arrow-btn-animation 2s ease-in-out infinite;
   transition: all 300ms ease-in-out;
 }
-.arrow-btn:hover{
+.arrow-btn:hover {
   color: #c48affd0;
 }
 .my-photo {

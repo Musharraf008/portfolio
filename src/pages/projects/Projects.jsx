@@ -1,20 +1,30 @@
 import React from "react";
 import "./projects.css";
-import projectsPuppy from "../../assets/icons/projects-puppy.png";
+import projectsPuppy from "../../assets/puppies/projects-puppy.png";
 import test1 from "../../assets/img/Test-project-1.png";
 import test11 from "../../assets/img/Test-project-11.png";
 import test2 from "../../assets/img/Test-project-2.png";
 import test22 from "../../assets/img/Test-project-22.png";
 
-const Projects = () => {
+const Projects = ({ changebg }) => {
   return (
     <div className="projects-container">
-      <header>
-        Project Gallery: Where <span className="orange"> Ideas</span> Come to <span className="green">Life!</span>
+      <header
+        style={{
+          color: changebg ? "black" : "",
+        }}
+      >
+        Project Gallery: Where <span className="orange"> Ideas</span> Come to{" "}
+        <span className="green">Life!</span>
         <img src={projectsPuppy} alt="" />
       </header>
       <main>
-        <div className="project-wrapper-bg">
+        <div
+          className="project-wrapper-bg"
+          style={{
+            border: changebg ? "2px solid rgba(0, 0, 0, 0.2" : "",
+          }}
+        >
           <img src={test11} alt="blured-bg" className="bg-img" />
           <div className="project-blur-bg">
             <img src={test1} alt="project-img" className="project-img" />
@@ -28,7 +38,12 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="project-wrapper-bg">
+        <div
+          className="project-wrapper-bg"
+          style={{
+            border: changebg ? "2px solid rgba(0, 0, 0, 0.2" : "",
+          }}
+        >
           <img src={test22} alt="blured-bg" className="bg-img" />
           <div className="project-blur-bg">
             <img src={test2} alt="project-img" className="project-img" />

@@ -1,14 +1,18 @@
 import React from "react";
 import "./contact.css";
-import footerImg1 from '../../assets/icons/footer-img-1.png'
-import footerImg2 from '../../assets/icons/footer-img-2.png'
-import footerImg3 from '../../assets/icons/footer-img-3.png'
-import footerImg4 from '../../assets/icons/footer-img-4.png'
+import footerImg1 from "../../assets/puppies/footer-img-1.png";
+import footerImg2 from "../../assets/puppies/footer-img-2.png";
+import footerImg3 from "../../assets/puppies/footer-img-3.png";
+import footerImg4 from "../../assets/puppies/footer-img-4.png";
 
-const Contact = () => {
+const Contact = ({ changebg }) => {
   return (
     <div className="contact-container">
-      <header>
+      <header
+        style={{
+          background: changebg ? "rgba(0, 0, 0, 0.15)" : "",
+        }}
+      >
         <h2>CONTACT</h2>
         <div className="grey-bar"></div>
         <h2>musharrafjamal08@gmail.com</h2>
@@ -16,15 +20,30 @@ const Contact = () => {
       <div className="availability-wrapper">
         <span>Currently: Available</span>
       </div>
-      <div className="contact-description-wrapper">
+      <div
+        className="contact-description-wrapper"
+        style={{
+          color: changebg ? "black" : "",
+        }}
+      >
         <div>
-          <h2>Hello there,</h2>
+          <h2
+            style={{
+              color: changebg ? "black" : "",
+            }}
+          >
+            Hello there,
+          </h2>
           <p>
             Kindly send me a letter at{" "}
             <a
               href="mailto: musharrafjamal08@gmail.com"
               target="_blank"
+              rel="noreferrer"
               className="underline"
+              style={{
+                color: changebg ? "black" : "",
+              }}
             >
               musharrafjamal08@gmail.com
             </a>
@@ -38,21 +57,35 @@ const Contact = () => {
           <a
             href="https://www.instagram.com/musharraf_codeverse"
             target="_blank"
+            rel="noreferrer"
           >
             Instagram
           </a>
           ,{" "}
-          <a href="http://twitter.com/MusharrafJamal8" target="_blank">
+          <a
+            href="http://twitter.com/MusharrafJamal8"
+            target="_blank"
+            rel="noreferrer"
+          >
             TwitterX
           </a>
           ,{" "}
-          <a href="http://www.linkedin.com/in/musharrafjamal8" target="_blank">
+          <a
+            href="http://www.linkedin.com/in/musharrafjamal8"
+            target="_blank"
+            rel="noreferrer"
+          >
             LinkedIn
           </a>
           .
         </div>
       </div>
-      <footer className="footer-wrapper">
+      <footer
+        className="footer-wrapper"
+        style={{
+          background: changebg ? "rgba(0, 0, 0, 0.15)" : "",
+        }}
+      >
         <div className="copyright-wrapper">
           <h1>© Musharraf Jamal 2023</h1>
           <p>

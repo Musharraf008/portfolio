@@ -43,6 +43,7 @@
   gap: 2rem;
   font-family: poppins;
   line-height: 1.2;
+  color: white;
 }
 .contact-description-wrapper h2 {
   font-weight: 100;
@@ -54,7 +55,6 @@
   width: 65%;
   font-size: 1.4rem;
   line-height: 108.5%;
-  color: rgba(255, 255, 255);
 }
 .underline {
   text-decoration: underline;
@@ -62,7 +62,6 @@
 }
 .contact-urls-wrapper {
   font-size: 1.5rem;
-  color: white;
   font-weight: 400;
 }
 .contact-urls-wrapper a:first-child {

@@ -7,6 +7,7 @@
   mask: var(--mask);
   height: 110px;
   background: linear-gradient(281deg, #484f9c 0%, #a964e0 100%);
+  z-index: 111;
 }
 .about-img {
   transition: all 1s ease-in-out;
@@ -30,9 +31,10 @@
   color: rgba(255, 255, 255, 0.8);
 }
 .about-section-container h2 {
-  font-family: "Caveat", cursive;
-  font-size: 4rem;
-  font-weight: 400;
+  /* font-family: "Caveat", cursive; */
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
 }
 .who-am-i-wrapper h2 {
   color: #ff3d55;
@@ -81,32 +83,45 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.618rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .box-bullet-point-wrapper {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
   padding: 1.8rem;
   color: black;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  transition: all 400ms ease-in-out;
 }
-.box-bullet-point-wrapper:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.05);
-}
-.box-bullet-point-wrapper:hover p {
-  font-size: 1.1rem;
-  width: 85%;
-}
+
 .box-bullet-point-wrapper p {
   width: 75%;
   transition: all 400ms ease-in-out;
 }
 .box-bullet-point-wrapper img {
   width: 5rem;
+}
+.ATQ-wrapper {
+  width: 80%;
+}
+.ATQ-bg-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.ATQ-bg-wrapper img{
+  border-radius: 25px;
+  
+}
+.glassmorphism {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(150px);
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 .ATQ-container {
   display: flex;
@@ -124,29 +139,30 @@
   position: absolute;
   top: 0;
 }
-.ATQ-heading-wrapper{
+.ATQ-heading-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
 }
-.ATQ-wrapper{
+.ATQ-wrapper {
   width: 60%;
   color: black;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.ATQ-wrapper h2{
+.ATQ-wrapper h2 {
+  font-family: "Caveat", cursive;
   font-size: 2rem;
   font-weight: bold;
 }
-.ATQ-questions-wrapper{
+.ATQ-questions-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2.5rem;
 }
-.ATQ-questions-wrapper i{
+.ATQ-questions-wrapper i {
   font-size: 1.2rem;
   font-weight: 500;
   font-family: poppins;

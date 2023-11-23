@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import logo from "../assets/icons/logo.svg";
 import { AiOutlineClose, AiFillHome } from "react-icons/ai";
@@ -11,8 +11,9 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { HiInformationCircle } from "react-icons/hi";
 import { BsTools } from "react-icons/bs";
 import { RiLightbulbFlashFill } from "react-icons/ri";
+import { TbHandClick } from "react-icons/tb";
 
-const Nav = () => {
+const Nav = ({ setBg }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const variants = {
     open: {
@@ -60,16 +61,35 @@ const Nav = () => {
     },
     hidden: { x: -150 },
   };
+  const [changebg, setChangeBg] = useState(false);
+  useEffect(() => {
+    setBg(changebg);
+  }, [changebg, setBg]);
   return (
     <nav className="navbar">
       <div className="main-nav">
-        <motion.img
-          src={logo}
-          className="nav-logo"
-          initial="hidden"
-          animate="visible"
-          variants={logoVariant}
-        />
+        <div
+          className="logo-wrapper"
+          onClick={() => {
+            setChangeBg(!changebg);
+          }}
+        >
+          <motion.img
+            src={logo}
+            className="nav-logo"
+            initial="hidden"
+            animate="visible"
+            variants={logoVariant}
+          />
+          <span
+            style={{
+              color: changebg ? "rgba(0, 0, 0, 0.70)" : "#ffffffb3",
+            }}
+          >
+            Tap me
+          </span>
+          <TbHandClick color={changebg ? "rgba(0, 0, 0, 0.70)" : "#ffffffb3"} />
+        </div>
         <div className="hamburger">
           <motion.div
             className="menu-wrapper"
@@ -81,6 +101,10 @@ const Nav = () => {
               className="nav-bg"
               variants={variants}
               animate={openMenu ? "open" : "closed"}
+              style={{
+                background: changebg ? "rgba(0, 0, 0, 0.1)" : "",
+                boxShadow: changebg ? "0px 0px 2px 1px rgba(0, 0, 0, 0.50)" : "",
+              }}
             >
               <button
                 onClick={() => {

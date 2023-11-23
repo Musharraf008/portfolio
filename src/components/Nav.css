@@ -10,6 +10,15 @@
   align-items: center;
   width: 90%;
 }
+.logo-wrapper{
+  display: flex;
+  align-items: center;
+  color: #ffffffb3;
+  font-family: 'pacifico';
+  font-weight: 100;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .nav-logo {
   width: 3rem;
 }
@@ -27,12 +36,9 @@
 .nav-bg {
   width: 15rem;
   height: 22rem;
-  /* background-color: #c48aff; */
-  /* background: linear-gradient(70deg, #A0C4FC 0%, #c48aff 100%); */
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   border-radius: 20px;
-  /* box-shadow: 6px 6px 2px 0px rgba(0, 0, 0, 0.65); */
 }
 .nav-bg button {
   padding-top: 0.7rem;

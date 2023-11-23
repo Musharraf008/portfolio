@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import Nav from '../../components/Nav'
+import Nav from "../../components/Nav";
 import img from "../../assets/img/my-photo.png";
 import { motion } from "framer-motion";
 import { BsArrowDown } from "react-icons/bs";
+import LightBg from "./white-home-bg copy.svg";
+import darkBg from "./dark-home-bg.svg";
 
-const Home = () => {
+const Home = ({ setBg }) => {
   const variants = {
     visible: {
       opacity: 1,
@@ -18,17 +20,25 @@ const Home = () => {
   const nameVariant = {
     visible: {
       y: 0,
-      scale: 1.1,
       transition: {
-        duration: 1
-      }
+        duration: 1,
+      },
     },
-    hidden: { y: 400,scale: 1 },
+    hidden: { y: 400 },
   };
+  const [changebg, setChangeBg] = useState(false);
+  useEffect(() => {
+    setBg(changebg);
+  }, [changebg, setBg]);
   return (
     <div>
-      <Nav />
+      <Nav setBg={setChangeBg} />
       <div className="home-wrapper">
+        {changebg ? (
+          <img src={darkBg} alt="" className="home-victor-bg" />
+        ) : (
+          <img src={LightBg} alt="" className="home-victor-bg" />
+        )}
         <motion.div
           className="home-main-section"
           initial="hidden"
@@ -36,18 +46,57 @@ const Home = () => {
           variants={variants}
         >
           <div className="home-main-section-first-child">
-            <span>Hello, i'm</span>
-            <div className="name">Musharraf Jamal</div>
-            <div className="post">Full stack developer</div>
-            <div className="home-btns">
-              <button className="primary-btn">Download CV</button>
-              {/* <button className="secondary-btn">Contact me</button> */}
+            <span
+              className="home-main-section-first-child-span"
+              style={{
+                color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
+              }}
+            >
+              Hello, i'm
+            </span>
+            <div
+              className="name"
+              style={{
+                color: changebg ? "#003DAB" : "",
+              }}
+            >
+              Musharraf Jamal
             </div>
+            <div
+              className="post"
+              style={{
+                color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
+              }}
+            >
+              Full stack developer & Designer
+            </div>
+            <div className="sub-post">
+              <i
+                style={{
+                  color: changebg ? "white" : "",
+                  background: changebg ? "#0094ff" : "",
+                }}
+              >
+                By merging coding and design, I produce eye-catching digital
+                artworks that capture attention.
+              </i>
+            </div>
+            <button
+              className={changebg ? "changed-primary-btn" : "primary-btn"}
+            >
+              Download CV
+            </button>
           </div>
-            <a href="#about" className="arrow-btn">
-              <BsArrowDown size={30} />
-              Explore About me
-            </a>
+          <a
+            href="#about"
+            className="arrow-btn"
+            style={{
+              color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
+            }}
+          >
+            <BsArrowDown size={30} />
+            Explore About me
+          </a>
         </motion.div>
         <motion.img
           src={img}

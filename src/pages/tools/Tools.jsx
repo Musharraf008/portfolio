@@ -1,6 +1,6 @@
 import React from "react";
 import "./tools.css";
-import toolsPuppy from "../../assets/icons/tools-puppy.png";
+import toolsPuppy from "../../assets/puppies/tools-puppy.png";
 import html from "../../assets/tools-icons/html.svg";
 import css from "../../assets/tools-icons/css.svg";
 import javaScript from "../../assets/tools-icons/javascript.svg";
@@ -14,8 +14,7 @@ import firebase from "../../assets/tools-icons/firebase.svg";
 import notion from "../../assets/tools-icons/notion.svg";
 import mongoDB from "../../assets/tools-icons/mongoDB.svg";
 
-
-const Tools = () => {
+const Tools = ({ changebg }) => {
   const toolsInformation = [
     {
       logo: html,
@@ -94,14 +93,27 @@ const Tools = () => {
   return (
     <div className="tools-container">
       <header className="tools-section-heading">
-        <h1>What are the Tools I use?</h1>
+        <h1
+          style={{
+            color: changebg ? "black" : "",
+          }}
+        >
+          What are the Tools I use?
+        </h1>
         <img src={toolsPuppy} alt="tools-puppy-icon" />
       </header>
-      <div className="tool-box-wrapper">
+      <div
+        className="tool-box-wrapper"
+        style={{
+          background: changebg ? "rgba(0, 0, 0, 0.15)" : "",
+        }}
+      >
         {toolsInformation.map((info, index) => {
           return (
             <div className="tool-box" key={index}>
-              <div className="tool-img"><img src={info.logo} alt="tool-logo" /></div>
+              <div className="tool-img">
+                <img src={info.logo} alt="tool-logo" />
+              </div>
               <div className="tool-description">
                 <h3>{info.name}</h3>
                 <p>{info.description}</p>
