@@ -68,7 +68,7 @@ const Home = ({ setBg }) => {
                 color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
               }}
             >
-              Full stack developer 
+              Full stack developer
             </div>
             <div className="sub-post">
               <i
@@ -84,7 +84,7 @@ const Home = ({ setBg }) => {
             <button
               className={changebg ? "changed-primary-btn" : "primary-btn"}
             >
-               CV
+              Download CV
             </button>
           </div>
           <a
