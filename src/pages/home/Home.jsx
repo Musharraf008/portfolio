@@ -84,7 +84,7 @@ const Home = ({ setBg }) => {
             <button
               className={changebg ? "changed-primary-btn" : "primary-btn"}
             >
-              Download CV
+               CV
             </button>
           </div>
           <a
