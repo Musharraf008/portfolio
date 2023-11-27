@@ -82,23 +82,29 @@
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.618rem;
+  /* grid-gap: 1.618rem; */
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.box-bullet-point-wrapper {
+.box-bullet-point-wrapper, .box-bullet-point-wrapper-light {
   padding: 1.8rem;
   color: black;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
 }
-
-.box-bullet-point-wrapper p {
+.box-bullet-point-wrapper:hover{
+  background-color: rgba(240, 255, 255, 0.8);
+}
+.box-bullet-point-wrapper-light:hover{
+  background-color: white;
+}
+.box-bullet-point-wrapper p, .box-bullet-point-wrapper-light p {
   width: 75%;
-  transition: all 400ms ease-in-out;
 }
-.box-bullet-point-wrapper img {
+.box-bullet-point-wrapper img, .box-bullet-point-wrapper-light img {
   width: 5rem;
 }
 .ATQ-wrapper {
@@ -116,7 +122,7 @@
 }
 .glassmorphism {
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(150px);
   width: 80%;
   height: 100%;
@@ -161,6 +167,7 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 2.5rem;
+  line-height: 140%;
 }
 .ATQ-questions-wrapper i {
   font-size: 1.2rem;

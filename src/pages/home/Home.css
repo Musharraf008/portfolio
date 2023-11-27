@@ -15,9 +15,9 @@
   position: relative;
 }
 .home-victor-bg {
-  height: 100vh;
-  width: 100vh;
+  width: 85vh;
   position: absolute;
+  top: 0;
   right: 0;
   bottom: 10px;
   z-index: 0;
@@ -71,6 +71,7 @@
   border-radius: 2.5rem;
   background: transparent;
   border: 2px solid #c48aff;
+  text-align: center;
   font-size: 1rem;
   cursor: pointer;
   transition: all 400ms ease-in-out;
@@ -88,7 +89,7 @@
   border-radius: 5px;
   background: transparent;
   border: 2px solid #006eff9d;
-
+  text-align: center;
   font-size: 1rem;
   cursor: pointer;
   transition: all 400ms ease-in-out;

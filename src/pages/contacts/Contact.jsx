@@ -66,6 +66,9 @@ const Contact = ({ changebg }) => {
             href="http://twitter.com/MusharrafJamal8"
             target="_blank"
             rel="noreferrer"
+            style={{
+              color: changebg ? "" : "#ACACAC",
+            }}
           >
             TwitterX
           </a>

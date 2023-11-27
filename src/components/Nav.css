@@ -20,7 +20,8 @@
   cursor: pointer;
 }
 .nav-logo {
-  width: 3rem;
+  width: 4rem;
+  padding-right: 5px;
 }
 .menu-wrapper {
   position: absolute;

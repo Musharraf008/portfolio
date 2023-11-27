@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
-import img from "../../assets/img/myImg.png";
+import darkImg from "../../assets/img/about-img-dark.png";
+import lightImg from "../../assets/img/about-img-light.png";
 import whoAmI from "../../assets/puppies/who am i.png";
 import WhatIDo from "../../assets/puppies/whatIDo.png";
 import { BsCheck2Circle } from "react-icons/bs";
@@ -51,11 +52,18 @@ const About = ({ changebg }) => {
   ];
   return (
     <div>
-      <div className="box"></div>
+      <div
+        className="box"
+        style={{
+          background: changebg
+            ? "linear-gradient(91deg, #0094FF -9.64%, #003DAB 185.3%)"
+            : "",
+        }}
+      ></div>
       <div className="about-section-container">
         <div className="about-sec-top">
           <img
-            src={img}
+            src={changebg ? lightImg : darkImg}
             className="about-img"
             alt=""
             style={{
@@ -131,13 +139,20 @@ const About = ({ changebg }) => {
           <div
             className="second-bullet-wrapper"
             style={{
-              background: changebg ? "#FFEACE" : "",
+              background: changebg ? "#F2E9E4" : "",
               border: changebg ? "2px solid rgba(0, 0, 0, .2)" : "",
             }}
           >
             {whatICanDoBulletPoints.map((point, index) => {
               return (
-                <div className="box-bullet-point-wrapper" key={index}>
+                <div
+                  className={
+                    changebg
+                      ? "box-bullet-point-wrapper-light"
+                      : "box-bullet-point-wrapper"
+                  }
+                  key={index}
+                >
                   <img src={point.gif} alt={point.gif} />
                   <p>{point.point}</p>
                 </div>

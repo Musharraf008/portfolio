@@ -4,8 +4,8 @@ import Nav from "../../components/Nav";
 import img from "../../assets/img/my-photo.png";
 import { motion } from "framer-motion";
 import { BsArrowDown } from "react-icons/bs";
-import LightBg from "./white-home-bg copy.svg";
-import darkBg from "./dark-home-bg.svg";
+import LightBg from "./home-shape-light.svg";
+import darkBg from "./home-shape-dark.svg";
 
 const Home = ({ setBg }) => {
   const variants = {
@@ -35,9 +35,9 @@ const Home = ({ setBg }) => {
       <Nav setBg={setChangeBg} />
       <div className="home-wrapper">
         {changebg ? (
-          <img src={darkBg} alt="" className="home-victor-bg" />
-        ) : (
           <img src={LightBg} alt="" className="home-victor-bg" />
+        ) : (
+          <img src={darkBg} alt="" className="home-victor-bg" />
         )}
         <motion.div
           className="home-main-section"
@@ -68,7 +68,7 @@ const Home = ({ setBg }) => {
                 color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
               }}
             >
-              Full stack developer
+              Full stack developer & Designer
             </div>
             <div className="sub-post">
               <i
@@ -81,11 +81,14 @@ const Home = ({ setBg }) => {
                 artworks that capture attention.
               </i>
             </div>
-            <button
+            <a
+              href="https://drive.google.com/file/d/14ls76hyXCQVMZ5QYtw6NXrqgLw-QhmwV/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className={changebg ? "changed-primary-btn" : "primary-btn"}
             >
-              Download CV
-            </button>
+              <span>Resume</span>
+            </a>
           </div>
           <a
             href="#about"

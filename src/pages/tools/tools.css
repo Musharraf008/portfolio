@@ -18,6 +18,10 @@
   font-family: "pacifico", cursive;
   font-size: 3rem;
 }
+.tools-section-heading h1 span{
+  color: #FF6C39;
+  /* color: #BDFF00; */
+}
 .tools-section-heading img {
   width: 3.8rem;
   height: 3.8rem;

@@ -98,7 +98,7 @@ const Tools = ({ changebg }) => {
             color: changebg ? "black" : "",
           }}
         >
-          What are the Tools I use?
+          <span>Tools</span> I use!
         </h1>
         <img src={toolsPuppy} alt="tools-puppy-icon" />
       </header>
