@@ -68,7 +68,7 @@ const Home = ({ setBg }) => {
                 color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
               }}
             >
-              Full stack developer & Designer
+              Full stack developer 
             </div>
             <div className="sub-post">
               <i
