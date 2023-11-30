@@ -10,7 +10,8 @@ const App = () => {
   const [changeBg, setChangeBg] = useState(false);
   return (
     <div className="app-container" style={{
-      background: changeBg ? '#FFF' : ''
+      background: changeBg ? '#FFF' : '',
+      
     }}>
       <section id="home">
         <Home setBg={setChangeBg} />

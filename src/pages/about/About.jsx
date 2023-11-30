@@ -82,11 +82,25 @@ const About = ({ changebg }) => {
                 color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
               }}
             >
-              "I am a 19-year-old, self-taught Full Stack Web Developer{" "}
-              <b>and Designer</b>, driven by a profound passion for programming.
-              My expertise lies in creating innovative web applications,
-              underpinned by a comprehensive understanding of{" "}
-              <b>UI and UX principles</b>."
+              "A self-taught{" "}
+              <i
+                style={{
+                  background: changebg ? "#8BCEFF" : "",
+                }}
+              >
+                Full Stack Web Developer and Designer
+              </i>
+              , driven by a profound passion for programming. My expertise lies
+              in creating innovative web applications, underpinned by a
+              comprehensive understanding of
+              <i
+                style={{
+                  background: changebg ? "#8BCEFF" : "",
+                }}
+              >
+                UI and UX principles
+              </i>
+              ."
             </p>
           </div>
         </div>
@@ -107,11 +121,32 @@ const About = ({ changebg }) => {
               color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
             }}
           >
-            "I specialize in developing <b>innovative web applications</b>. I
-            blend creativity and technical expertise to create user-friendly,
-            cutting-edge solutions. My commitment to
-            <b> staying updated with industry trends</b> ensures I deliver{" "}
-            <b>efficient, impactful web experiences</b>."
+            "I specialize in developing
+            <i
+              style={{
+                background: changebg ? "#8BCEFF" : "",
+              }}
+            >
+              innovative web applications
+            </i>
+            . I blend creativity and technical expertise to create
+            user-friendly, cutting-edge solutions. My commitment to
+            <i
+              style={{
+                background: changebg ? "#8BCEFF" : "",
+              }}
+            >
+              staying updated with industry trends
+            </i>{" "}
+            ensures I deliver
+            <i
+              style={{
+                background: changebg ? "#8BCEFF" : "",
+              }}
+            >
+              efficient, impactful web experiences
+            </i>
+            ."
           </p>
           {whatIDoBulletPoints.map((point, index) => {
             return (

@@ -111,7 +111,7 @@ const Nav = ({ setBg }) => {
                   setOpenMenu(!openMenu);
                 }}
               >
-                {openMenu ? <AiOutlineClose size={35} /> : <FiMenu size={35} />}
+                {openMenu ? <AiOutlineClose size={30} /> : <FiMenu size={30} />}
               </button>
               <div className="nav-links">
                 <a href="#home">

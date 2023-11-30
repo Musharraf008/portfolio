@@ -28,7 +28,7 @@
   width: 90%;
   margin: auto;
   margin-top: 2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
 }
 .about-section-container h2 {
   /* font-family: "Caveat", cursive; */
@@ -43,7 +43,7 @@
   display: flex;
 }
 .who-am-i-wrapper {
-  width: 60%;
+  width: 80%;
   margin-left: 5rem;
   display: flex;
   flex-direction: column;
@@ -51,6 +51,18 @@
 }
 .about-p {
   font-size: 1.2rem;
+  letter-spacing: 2px;
+  /* font-family: 'Crimson Text', serif; */
+  font-family: 'Space Grotsek', serif;
+  line-height: 135%;
+}
+.about-p i{
+  font-weight: bolder;
+  color: black;
+  background-color: #a964e0;
+  border-radius: 10px;
+  padding: 0 10px;
+  white-space: nowrap
 }
 .sections-wrapper {
   display: flex;
@@ -62,11 +74,12 @@
   height: 3.8rem;
 }
 .what-i-do-wrapper {
-  width: 70%;
+  width: 88%;
   margin-top: 1rem;
 }
 .what-i-do-wrapper p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  
 }
 .what-i-do-wrapper h2 {
   color: #22d3fe;

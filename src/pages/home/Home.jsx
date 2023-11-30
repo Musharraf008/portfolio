@@ -3,9 +3,6 @@ import "./Home.css";
 import Nav from "../../components/Nav";
 import img from "../../assets/img/my-photo.png";
 import { motion } from "framer-motion";
-import { BsArrowDown } from "react-icons/bs";
-import LightBg from "./home-shape-light.svg";
-import darkBg from "./home-shape-dark.svg";
 
 const Home = ({ setBg }) => {
   const variants = {
@@ -34,11 +31,6 @@ const Home = ({ setBg }) => {
     <div>
       <Nav setBg={setChangeBg} />
       <div className="home-wrapper">
-        {changebg ? (
-          <img src={LightBg} alt="" className="home-victor-bg" />
-        ) : (
-          <img src={darkBg} alt="" className="home-victor-bg" />
-        )}
         <motion.div
           className="home-main-section"
           initial="hidden"
@@ -90,25 +82,17 @@ const Home = ({ setBg }) => {
               <span>Resume</span>
             </a>
           </div>
-          <a
-            href="#about"
-            className="arrow-btn"
-            style={{
-              color: changebg ? "rgba(0, 61, 173, 0.5)" : "",
-            }}
-          >
-            <BsArrowDown size={30} />
-            Explore About me
-          </a>
         </motion.div>
-        <motion.img
-          src={img}
-          className="my-photo"
-          alt="My Image"
-          initial="hidden"
-          animate="visible"
-          variants={nameVariant}
-        />
+        <div className={changebg ? "home-img-wrapper-light": "home-img-wrapper-dark"}>
+          <motion.img
+            src={img}
+            className="my-photo"
+            alt="My Image"
+            initial="hidden"
+            animate="visible"
+            variants={nameVariant}
+          />
+        </div>
       </div>
     </div>
   );

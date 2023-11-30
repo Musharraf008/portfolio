@@ -7,6 +7,8 @@
   );
   overflow-x: hidden;
 }
-#home {
-  height: 100vh;
+::selection {
+  color: black;
+  background: #8BCEFF;
 }
+
