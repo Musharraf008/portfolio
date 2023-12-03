@@ -12,7 +12,7 @@ import monitorGIF from "../../assets/gif/2.gif";
 import responsiveDesignGIF from "../../assets/gif/3.gif";
 import settingGIF from "../../assets/gif/4.gif";
 
-import ATQFrame from "../../assets/frames/Frame 72.png";
+import Atq from "../../components/Atq";
 import { BiMessageDetail } from "react-icons/bi";
 
 const About = ({ changebg }) => {
@@ -37,7 +37,7 @@ const About = ({ changebg }) => {
     {
       question: "“HOW MUCH DOES [X] COST?”",
       answer:
-        "Determining the cost of my services is a process that involves understanding the specifics of your project. I would be happy to discuss your needs and provide you with an estimate that reflects the value of my time and expertise. I believe that my prices are fair and reasonable given the quality of work that I deliver. Typically, a portfolio like mine falls within the price range of $800 to $1200, but I am always open to discussing your specific needs and finding a solution that works for you. Let's work together to create something great!",
+        "It honestly depends on many factors. While I can’t give you an accurate estimate without hearing the specifics of your project. I value my time and yours too. usually for a portfolio like me will cost 800-1200 $ range, but I am always open to discussing your specific needs and finding a solution that works for you. Let's work together to create something great!",
     },
     {
       question: "“DO YOU CHARGE BY THE HOUR?”",
@@ -92,7 +92,7 @@ const About = ({ changebg }) => {
               </i>
               , driven by a profound passion for programming. My expertise lies
               in creating innovative web applications, underpinned by a
-              comprehensive understanding of
+              comprehensive understanding of{" "}
               <i
                 style={{
                   background: changebg ? "#8BCEFF" : "",
@@ -121,7 +121,7 @@ const About = ({ changebg }) => {
               color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
             }}
           >
-            "I specialize in developing
+            "I specialize in developing{" "}
             <i
               style={{
                 background: changebg ? "#8BCEFF" : "",
@@ -130,7 +130,7 @@ const About = ({ changebg }) => {
               innovative web applications
             </i>
             . I blend creativity and technical expertise to create
-            user-friendly, cutting-edge solutions. My commitment to
+            user-friendly, cutting-edge solutions. My commitment to{" "}
             <i
               style={{
                 background: changebg ? "#8BCEFF" : "",
@@ -138,7 +138,7 @@ const About = ({ changebg }) => {
             >
               staying updated with industry trends
             </i>{" "}
-            ensures I deliver
+            ensures I deliver{" "}
             <i
               style={{
                 background: changebg ? "#8BCEFF" : "",
@@ -157,7 +157,7 @@ const About = ({ changebg }) => {
                 />
                 <p
                   style={{
-                    color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
+                    color: changebg ? "rgba(0, 0, 0, 0.8)" : "",
                   }}
                 >
                   {point}
@@ -196,30 +196,19 @@ const About = ({ changebg }) => {
           </div>
         </div>
         <div className="ATQ-container">
-          <div className="ATQ-bg-wrapper">
-            <img src={ATQFrame} alt="" />
-            <div
-              className="glassmorphism"
+          <div className="ATQ-heading-wrapper">
+            <BiMessageDetail size={35} color={changebg ? "#0095ff" : ""} />
+            <h2
               style={{
-                background: changebg ? "rgba(255, 255, 255, 0.3.5)" : "",
-                border: changebg ? "2px solid rgba(0, 0, 0, .2)" : "",
+                color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
               }}
-            ></div>
+            >
+              <span>Answer</span> to your Questions
+            </h2>
           </div>
-          <div className="ATQ-wrapper">
-            <div className="ATQ-heading-wrapper">
-              <BiMessageDetail size={35} color="black" />
-              <h2>"Answers to your Questions"</h2>
-            </div>
-            {AQTQuestions.map((info, index) => {
-              return (
-                <div className="ATQ-questions-wrapper" key={index}>
-                  <i>{info.question}</i>
-                  <p>{info.answer}</p>
-                </div>
-              );
-            })}
-          </div>
+          {AQTQuestions.map((info) => {
+            return <Atq ques={info.question} ans={info.answer} changebg={changebg} />;
+          })}
         </div>
       </div>
     </div>

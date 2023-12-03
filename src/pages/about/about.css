@@ -31,38 +31,38 @@
   color: rgba(255, 255, 255);
 }
 .about-section-container h2 {
-  /* font-family: "Caveat", cursive; */
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   font-weight: lighter;
 }
-.who-am-i-wrapper h2 {
-  color: #ff3d55;
-}
 .about-sec-top {
   display: flex;
+  gap: 4rem;
 }
 .who-am-i-wrapper {
-  width: 80%;
-  margin-left: 5rem;
+  /* width: 80%; */
+  /* margin-left: 5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+  .who-am-i-wrapper h2 {
+    color: #ff3d55;
+  }
 .about-p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.8592rem + 0.6009vw, 1.4rem);
   letter-spacing: 2px;
-  /* font-family: 'Crimson Text', serif; */
-  font-family: 'Space Grotsek', serif;
-  line-height: 135%;
+  font-family: "Space Grotsek", serif;
+  text-align: justify;
+  line-height: 145%;
 }
-.about-p i{
+.about-p i {
   font-weight: bolder;
   color: black;
   background-color: #a964e0;
   border-radius: 10px;
   padding: 0 10px;
-  white-space: nowrap
+  white-space: nowrap;
 }
 .sections-wrapper {
   display: flex;
@@ -74,12 +74,11 @@
   height: 3.8rem;
 }
 .what-i-do-wrapper {
-  width: 88%;
+  width: 100%;
   margin-top: 1rem;
 }
 .what-i-do-wrapper p {
   margin-bottom: 1.2rem;
-  
 }
 .what-i-do-wrapper h2 {
   color: #22d3fe;
@@ -88,6 +87,10 @@
   display: flex;
   gap: 0.4rem;
 }
+.bullet-point-wrapper p {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
 .what-i-can-do-wrapper h2 {
   color: #00d870;
 }
@@ -95,11 +98,11 @@
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-gap: 1.618rem; */
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.box-bullet-point-wrapper, .box-bullet-point-wrapper-light {
+.box-bullet-point-wrapper,
+.box-bullet-point-wrapper-light {
   padding: 1.8rem;
   color: black;
   display: flex;
@@ -108,82 +111,55 @@
   transition: all 500ms ease-in-out;
   cursor: pointer;
 }
-.box-bullet-point-wrapper:hover{
+.box-bullet-point-wrapper:hover {
   background-color: rgba(240, 255, 255, 0.8);
 }
-.box-bullet-point-wrapper-light:hover{
+.box-bullet-point-wrapper-light:hover {
   background-color: white;
 }
-.box-bullet-point-wrapper p, .box-bullet-point-wrapper-light p {
+.box-bullet-point-wrapper p,
+.box-bullet-point-wrapper-light p {
   width: 75%;
 }
-.box-bullet-point-wrapper img, .box-bullet-point-wrapper-light img {
+.box-bullet-point-wrapper img,
+.box-bullet-point-wrapper-light img {
   width: 5rem;
-}
-.ATQ-wrapper {
-  width: 80%;
-}
-.ATQ-bg-wrapper {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.ATQ-bg-wrapper img{
-  border-radius: 25px;
-  
-}
-.glassmorphism {
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(150px);
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  top: 0;
 }
 .ATQ-container {
   display: flex;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+  gap: 2rem;
   margin-top: 2rem;
-}
-.ATQ-container img {
-  width: 80%;
-  height: 113vh;
-  /* z-index: -1; */
-}
-.ATQ-wrapper {
-  z-index: 1;
-  position: absolute;
-  top: 0;
+  text-align: center;
 }
 .ATQ-heading-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  justify-content: center;
 }
-.ATQ-wrapper {
-  width: 60%;
-  color: black;
-  font-family: "Space Grotesk", sans-serif;
-}
-
-.ATQ-wrapper h2 {
-  font-family: "Caveat", cursive;
-  font-size: 2rem;
+.ATQ-heading-wrapper h2 {
+  font-family: Caveat;
   font-weight: bold;
 }
-.ATQ-questions-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  line-height: 140%;
+
+/* Media Query */
+@media (max-width: 800px) {
+  .about-img{
+    display: none;
+  }
+  .second-bullet-wrapper{
+    display: block;
+  }
+  .about-p{
+    text-align: left;
+
+  }
+  .about-p i {
+    border-radius: 0px;
+    padding: 0 0px;
+    white-space: wrap;
+  }
 }
-.ATQ-questions-wrapper i {
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-family: poppins;
+@media (max-width: 500px) {
+  
 }

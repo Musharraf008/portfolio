@@ -1,0 +1,60 @@
+.ATQ-wrapper {
+  background: rgb(255, 255, 255, 0.8);
+  box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 30vh;
+  margin: auto;
+  transition: all 1s linear;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  color: #003dab;
+}
+.ATQ-heading,
+.ATQ-p,
+.ATQ-bg-text {
+  transition: all 0.5s linear;
+}
+.ATQ-bg-text {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.08);
+  /* font-size: clamp(2rem, -0.443rem + 10.4235vw, 8rem); */
+  font-size: clamp(3rem, 0.9642rem + 8.6862vw, 8rem);
+  font-weight: bolder;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 20px;
+}
+.ATQ-heading{
+  font-size: clamp(1rem, 0.9186rem + 0.3474vw, 1.2rem);
+}
+.ATQ-p {
+  transform: translateY(160px);
+  text-align: center;
+  width: 88%;
+  position: absolute;
+  font-size: clamp(0.8rem, 0.7186rem + 0.3474vw, 1rem);
+}
+.ATQ-wrapper:hover > .ATQ-p {
+  transform: translateY(0);
+}
+.ATQ-wrapper:hover > h4 {
+  transform: translateY(-140px);
+}
+.ATQ-wrapper:hover > .ATQ-bg-text {
+  transform: scale(0);
+
+}
+@media (max-width: 800px) {
+  .ATQ-p{
+    transform: translateY(260px);
+  }
+  .ATQ-bg-text{
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 10px;
+  }
+}
