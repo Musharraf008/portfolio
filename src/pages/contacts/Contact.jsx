@@ -106,10 +106,10 @@ const Contact = ({ changebg }) => {
             <a href="#contact">Contact</a>
           </div>
           <div className="footer-icons-wrapper">
-            <img src={footerImg1} alt="" />
-            <img src={footerImg2} alt="" />
-            <img src={footerImg3} alt="" />
-            <img src={footerImg4} alt="" />
+            <img src={footerImg2} alt="" loading="lazy" />
+            <img src={footerImg1} alt="" loading="lazy" />
+            <img src={footerImg3} alt="" loading="lazy" />
+            <img src={footerImg4} alt="" loading="lazy" />
           </div>
         </div>
       </footer>

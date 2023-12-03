@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Nav from "../../components/Nav";
 import img from "../../assets/img/my-photo.png";
+import compressedImg from "../../assets/img/my-photo.webp";
 import { motion } from "framer-motion";
 
 const Home = ({ setBg }) => {
@@ -77,20 +78,35 @@ const Home = ({ setBg }) => {
               href="https://drive.google.com/file/d/14ls76hyXCQVMZ5QYtw6NXrqgLw-QhmwV/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
+              title="Download Resume"
               className={changebg ? "changed-primary-btn" : "primary-btn"}
             >
               <span>Resume</span>
             </a>
           </div>
         </motion.div>
-        <div className={changebg ? "home-img-wrapper-light": "home-img-wrapper-dark"}>
-          <motion.img
+        <div
+          className={
+            changebg ? "home-img-wrapper-light" : "home-img-wrapper-dark"
+          }
+        >
+          {/* <motion.img
             src={img}
             className="my-photo"
             alt="My Image"
             initial="hidden"
             animate="visible"
             variants={nameVariant}
+            loading="lazy"
+          /> */}
+          <motion.img
+            src={compressedImg}
+            className="my-photo"
+            alt="My Image"
+            initial="hidden"
+            animate="visible"
+            variants={nameVariant}
+            loading="lazy"
           />
         </div>
       </div>

@@ -7,14 +7,19 @@
 .projects-container header {
   color: whitesmoke;
   font-family: pacifico;
-  font-size: 3rem;
   font-weight: 100;
   margin-bottom: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: .5rem;
   justify-content: center;
   align-items: center;
 }
+.project-header-test-wrapper{
+  font-size: clamp(1.4rem, 0.8366rem + 2.4038vw, 3rem);
+  display: flex;
+  gap: 1rem;
+}
+
 .orange {
   color: #F0A024;
 }
@@ -71,4 +76,18 @@
 .project-description-wrapper h3 {
   font-size: 3rem;
   font-weight: 300;
+}
+
+/* Media Query */
+@media (max-width: 800px) {
+  .projects-container header{
+    gap: 0;
+  }
+  .project-header-test-wrapper{
+    display: block;
+    gap: 0;
+  }
+}
+@media (max-width: 500px) {
+  
 }

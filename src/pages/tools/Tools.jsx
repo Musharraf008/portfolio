@@ -112,7 +112,7 @@ const Tools = ({ changebg }) => {
           return (
             <div className="tool-box" key={index}>
               <div className="tool-img">
-                <img src={info.logo} alt="tool-logo" />
+                <img src={info.logo} alt="tool-logo" loading="lazy" />
               </div>
               <div className="tool-description">
                 <h3>{info.name}</h3>

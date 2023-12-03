@@ -107,7 +107,7 @@
   color: black;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap:1rem;
   transition: all 500ms ease-in-out;
   cursor: pointer;
 }
@@ -139,7 +139,7 @@
 }
 .ATQ-heading-wrapper h2 {
   font-family: Caveat;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* Media Query */

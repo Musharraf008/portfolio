@@ -70,6 +70,7 @@ const Nav = ({ setBg }) => {
       <div className="main-nav">
         <div
           className="logo-wrapper"
+          title="Change mode"
           onClick={() => {
             setChangeBg(!changebg);
           }}
@@ -137,6 +138,7 @@ const Nav = ({ setBg }) => {
                   href="http://www.linkedin.com/in/musharrafjamal8"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="LinkedIn"
                 >
                   <motion.img
                     src={linkedin}
@@ -149,6 +151,7 @@ const Nav = ({ setBg }) => {
                   href="https://www.instagram.com/musharraf_codeverse"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Instagram"
                 >
                   <motion.img
                     src={instagram}
@@ -161,6 +164,7 @@ const Nav = ({ setBg }) => {
                   href="http://twitter.com/MusharrafJamal8"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="TwitterX"
                 >
                   <motion.img
                     src={twitter}

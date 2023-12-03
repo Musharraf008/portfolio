@@ -14,20 +14,30 @@ const Projects = ({ changebg }) => {
           color: changebg ? "black" : "",
         }}
       >
-        Project Gallery: Where <span className="orange"> Ideas</span> Come to{" "}
-        <span className="green">Life!</span>
-        <img src={projectsPuppy} alt="" />
+        <div className="project-header-test-wrapper">
+          <div>Project Gallery:</div>
+          <div>
+            Where <span className="orange"> Ideas</span> Come to{" "}
+            <span className="green">Life!</span>
+          </div>
+        </div>
+        <img src={projectsPuppy} alt="" loading="lazy" />
       </header>
       <main>
         <div
           className="project-wrapper-bg"
           style={{
-            border: changebg ? "2px solid rgba(0, 0, 0, 0.2" : "",
+            boxShadow: changebg ? "2px 3px 12px 1px rgba(0, 0, 0, 0.3)" : "",
           }}
         >
-          <img src={test11} alt="blured-bg" className="bg-img" />
+          <img src={test11} alt="blured-bg" className="bg-img" loading="lazy" />
           <div className="project-blur-bg">
-            <img src={test1} alt="project-img" className="project-img" />
+            <img
+              src={test1}
+              alt="project-img"
+              className="project-img"
+              loading="lazy"
+            />
             <div className="project-description-wrapper">
               <h3>E-commerce App</h3>
               <p>
@@ -41,12 +51,17 @@ const Projects = ({ changebg }) => {
         <div
           className="project-wrapper-bg"
           style={{
-            border: changebg ? "2px solid rgba(0, 0, 0, 0.2" : "",
+            boxShadow: changebg ? "2px 3px 12px 1px rgba(0, 0, 0, 0.3)" : "",
           }}
         >
-          <img src={test22} alt="blured-bg" className="bg-img" />
+          <img src={test22} alt="blured-bg" className="bg-img" loading="lazy" />
           <div className="project-blur-bg">
-            <img src={test2} alt="project-img" className="project-img" />
+            <img
+              src={test2}
+              alt="project-img"
+              className="project-img"
+              loading="lazy"
+            />
             <div className="project-description-wrapper">
               <h3>Self development App</h3>
               <p>

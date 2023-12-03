@@ -1,16 +1,20 @@
 import React from "react";
 import "./about.css";
-import darkImg from "../../assets/img/about-img-dark.png";
+import darkImg from "../../assets/img/about-img-dark.webp";
 import lightImg from "../../assets/img/about-img-light.png";
 import whoAmI from "../../assets/puppies/who am i.png";
 import WhatIDo from "../../assets/puppies/whatIDo.png";
 import { BsCheck2Circle } from "react-icons/bs";
 import whatICanDo from "../../assets/puppies/what i can do.png";
 
-import mobileDesignGIF from "../../assets/gif/1.gif";
-import monitorGIF from "../../assets/gif/2.gif";
-import responsiveDesignGIF from "../../assets/gif/3.gif";
-import settingGIF from "../../assets/gif/4.gif";
+import mobileDesignGIF from "../../assets/gif/1.png";
+import monitorGIF from "../../assets/gif/2.png";
+import responsiveDesignGIF from "../../assets/gif/3.png";
+import settingGIF from "../../assets/gif/4.png";
+// import mobileDesignGIF from "../../assets/gif/1.gif";
+// import monitorGIF from "../../assets/gif/2.gif";
+// import responsiveDesignGIF from "../../assets/gif/3.gif";
+// import settingGIF from "../../assets/gif/4.gif";
 
 import Atq from "../../components/Atq";
 import { BiMessageDetail } from "react-icons/bi";
@@ -66,6 +70,7 @@ const About = ({ changebg }) => {
             src={changebg ? lightImg : darkImg}
             className="about-img"
             alt=""
+            loading="lazy"
             style={{
               width: 250,
             }}
@@ -74,7 +79,7 @@ const About = ({ changebg }) => {
           <div className="who-am-i-wrapper">
             <div className="sections-wrapper">
               <h2>Who am I?</h2>
-              <img src={whoAmI} alt="" />
+              <img src={whoAmI} alt="" loading="lazy" />
             </div>
             <p
               className="about-p"
@@ -113,7 +118,7 @@ const About = ({ changebg }) => {
             >
               What i Do?
             </h2>
-            <img src={WhatIDo} alt="" />
+            <img src={WhatIDo} alt="" loading="lazy" />
           </div>
           <p
             className="about-p"
@@ -169,7 +174,7 @@ const About = ({ changebg }) => {
         <div className="what-i-can-do-wrapper">
           <div className="sections-wrapper">
             <h2>What i can Do?</h2>
-            <img src={whatICanDo} alt="" />
+            <img src={whatICanDo} alt="" loading="lazy" />
           </div>
           <div
             className="second-bullet-wrapper"
@@ -188,8 +193,15 @@ const About = ({ changebg }) => {
                   }
                   key={index}
                 >
-                  <img src={point.gif} alt={point.gif} />
-                  <p>{point.point}</p>
+                  <img src={point.gif} alt={point.gif} loading="lazy" />
+                  <p
+                    style={{
+                      fontWeight: "bold",
+                      color: "rgba(0, 0, 0, .8)",
+                    }}
+                  >
+                    {point.point}
+                  </p>
                 </div>
               );
             })}
@@ -203,11 +215,13 @@ const About = ({ changebg }) => {
                 color: changebg ? "rgba(0, 0, 0, 0.9)" : "",
               }}
             >
-              <span>Answer</span> to your Questions
+              Answer to your Questions
             </h2>
           </div>
           {AQTQuestions.map((info) => {
-            return <Atq ques={info.question} ans={info.answer} changebg={changebg} />;
+            return (
+              <Atq ques={info.question} ans={info.answer} changebg={changebg} />
+            );
           })}
         </div>
       </div>

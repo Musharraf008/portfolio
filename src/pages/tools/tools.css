@@ -1,5 +1,4 @@
 .tools-container {
-  /* background-color: lightblue; */
   width: 90%;
   margin: auto;
   margin-top: 1rem;
@@ -58,8 +57,18 @@
 }
 .tool-box p{
     font-size: .8rem;
-    width: 80%;
+    width: 90%;
 }
 .tool-box img{
     width: 5rem;
+}
+
+/* Media Query */
+@media (max-width: 1000px) {
+  .tool-box-wrapper{
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+
 }
