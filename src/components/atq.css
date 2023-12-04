@@ -24,7 +24,6 @@
 .ATQ-bg-text {
   position: absolute;
   color: rgba(0, 0, 0, 0.1);
-  /* font-size: clamp(2rem, -0.443rem + 10.4235vw, 8rem); */
   font-size: clamp(3rem, 0.9642rem + 8.6862vw, 8rem);
   font-weight: bolder;
   font-family: "Nunito Sans", sans-serif;
@@ -48,7 +47,7 @@
 }
 .ATQ-wrapper:hover > .ATQ-bg-text {
   transform: scale(0);
-
+  transform-origin: top;
 }
 @media (max-width: 800px) {
   .ATQ-p{

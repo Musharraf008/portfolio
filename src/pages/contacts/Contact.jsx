@@ -1,6 +1,6 @@
 import React from "react";
 import "./contact.css";
-import footerImg1 from "../../assets/puppies/footer-img-1.png";
+import footerImg1 from "../../assets/puppies/footer-img-1.svg";
 import footerImg2 from "../../assets/puppies/footer-img-2.png";
 import footerImg3 from "../../assets/puppies/footer-img-3.png";
 import footerImg4 from "../../assets/puppies/footer-img-4.png";
@@ -106,8 +106,8 @@ const Contact = ({ changebg }) => {
             <a href="#contact">Contact</a>
           </div>
           <div className="footer-icons-wrapper">
-            <img src={footerImg2} alt="" loading="lazy" />
             <img src={footerImg1} alt="" loading="lazy" />
+            <img src={footerImg2} alt="" loading="lazy" />
             <img src={footerImg3} alt="" loading="lazy" />
             <img src={footerImg4} alt="" loading="lazy" />
           </div>

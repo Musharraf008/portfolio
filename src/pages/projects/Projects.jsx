@@ -6,7 +6,21 @@ import test11 from "../../assets/img/Test-project-11.png";
 import test2 from "../../assets/img/Test-project-2.png";
 import test22 from "../../assets/img/Test-project-22.png";
 
+import { IoOpenOutline } from "react-icons/io5";
+
 const Projects = ({ changebg }) => {
+  const peojectInfo = [
+    {
+      img: test1,
+      title: "E-commerce App",
+      des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, esse nam dignissimos hic quae deserunt adipisci. Magni perspiciatis tempora repellendus nisi,",
+    },
+    {
+      img: test2,
+      title: "E-commerce App",
+      des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, esse nam dignissimos hic quae deserunt adipisci. Magni perspiciatis tempora repellendus nisi,",
+    },
+  ];
   return (
     <div className="projects-container">
       <header
@@ -23,56 +37,28 @@ const Projects = ({ changebg }) => {
         </div>
         <img src={projectsPuppy} alt="" loading="lazy" />
       </header>
-      <main>
-        <div
-          className="project-wrapper-bg"
-          style={{
-            boxShadow: changebg ? "2px 3px 12px 1px rgba(0, 0, 0, 0.3)" : "",
-          }}
-        >
-          <img src={test11} alt="blured-bg" className="bg-img" loading="lazy" />
-          <div className="project-blur-bg">
-            <img
-              src={test1}
-              alt="project-img"
-              className="project-img"
-              loading="lazy"
-            />
-            <div className="project-description-wrapper">
-              <h3>E-commerce App</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
-                esse nam dignissimos hic quae deserunt adipisci. Magni
-                perspiciatis tempora repellendus nisi,
-              </p>
+      <div className="project-sub-container">
+        {peojectInfo.map((info) => {
+          return (
+            <div className="project-wrapper">
+              <span className="project-open-icon">
+                <IoOpenOutline size={25} />
+              </span>
+              <img src={info.img} alt="" loading="lazy" />
+              <div
+                className="project-text-wrapper"
+                style={{
+                  color: changebg ? "" : "#2f0743",
+                }}
+              >
+                <div className="project-hover-text">TOUCH ME</div>
+                <h3 className="project-text-wrapper-heading">{info.title}</h3>
+                <p className="project-text-wrapper-p">{info.des}</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div
-          className="project-wrapper-bg"
-          style={{
-            boxShadow: changebg ? "2px 3px 12px 1px rgba(0, 0, 0, 0.3)" : "",
-          }}
-        >
-          <img src={test22} alt="blured-bg" className="bg-img" loading="lazy" />
-          <div className="project-blur-bg">
-            <img
-              src={test2}
-              alt="project-img"
-              className="project-img"
-              loading="lazy"
-            />
-            <div className="project-description-wrapper">
-              <h3>Self development App</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
-                esse nam dignissimos hic quae deserunt adipisci. Magni
-                perspiciatis tempora repellendus nisi,
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
+          );
+        })}
+      </div>
     </div>
   );
 };
